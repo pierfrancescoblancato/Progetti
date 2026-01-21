@@ -1,0 +1,43 @@
+Git - Lista Comandi Essenziali
+
+    1. git status
+Mostra lo stato dei file locali, file non tracciati e branch corrente.git add .
+
+Aggiunge tutti i file modificati al prossimo commit.
+    2. git add nomefile
+
+Aggiunge uno specifico file al prossimo commit.
+    3. git commit -m "messaggio"
+
+Salva le modifiche localmente con un messaggio descrittivo.
+    4. git push
+
+Invia i commit locali al repository remoto su GitHub.
+    5. git pull
+
+Scarica le modifiche dal repository remoto e le unisce ai file locali.
+    6. git checkout -b main origin/main
+
+Crea un branch locale basato sul branch remoto "main".
+    7. git branch --set-upstream-to=origin/main main
+
+Collega il branch locale "main" al branch remoto "main".
+    8. git remote -v
+
+Mostra i repository remoti configurati.
+    9. git remote set-url origin URL
+
+Cambia l'URL del repository remoto esistente.
+    10. git fetch
+
+Scarica dati dal repository remoto senza fare merge.
+    11. Creare o modificare .gitignore
+
+Specifica file o cartelle da ignorare (non tracciare) da Git.
+
+Nota: Sequenza base per lavorare tra due PC:
+    1. git pull (aggiorna i file dal remoto)
+    2. Modifiche ai file
+    3. git add .
+    4. git commit -m "messaggio"
+    5. git push (invia su remoto)
