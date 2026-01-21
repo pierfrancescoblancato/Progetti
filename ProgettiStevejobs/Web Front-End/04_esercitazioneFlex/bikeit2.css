@@ -1,0 +1,110 @@
+.section{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+
+
+    height: 300px;
+
+    padding: 10px;
+    margin: 30px;
+    gap: 10px;
+}
+
+.photo-place{
+
+    display: flex;
+    width: 20%;
+    height: 100%;
+
+}
+
+.photo-left{
+    background-color: rgb(0, 200, 255);
+    border: 1px solid black;
+    border-radius: 10px; 
+
+    width: 50%;
+    height: 100%;
+
+    margin-right:  10px;
+
+}
+
+.photo-right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    gap: 5px;
+}
+
+.photo-top{
+    background-color: rgb(38, 255, 0);
+    height: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.photo-bottom{
+    background-color: rgb(255, 153, 0);
+    height: 50%;
+
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    
+}
+.text-place{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: auto;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding: 30px;
+
+}
+.button-container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    
+    margin-top: 10px;
+}
+
+.button-start{
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row; 
+
+    height: auto;
+    width: 50%;
+
+    margin-right: 10px;
+}
+.button {
+    background-color: rgb(249, 237, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+
+    flex-direction: row; 
+    width: 50px;
+    height: 50px;
+
+    margin:5px;
+}
+
+.button-end{
+    background-color: lightpink;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    width: 100px;
+    height: 50px;
+
+    margin: 5px;
+    margin-left: auto; /* spinge solo questo box a destra */
+}

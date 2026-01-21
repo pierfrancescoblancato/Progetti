@@ -1,0 +1,92 @@
+header{
+    background-color: rgb(109, 109, 109);
+    width: 99%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    position: fixed;
+    top: 0px;
+    border-radius: 5px;
+
+    z-index: 2;
+}
+.header-div{
+    padding: 10px;
+    height: auto;
+    width: 100%;
+}
+nav{
+    text-align: center;
+}
+a{
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+}
+body{
+    height: 2000px;
+}
+/*.box1{
+    background-color: rgb(0, 255, 255);
+    height: 50px;
+    width: 400px;
+    border-radius: 5px;
+
+    position: sticky;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+}*/
+.cards{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 99%;
+    margin: 10% auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    
+    padding: 5px;
+    
+    position: sticky;
+    
+}
+.card-1 {
+
+    background-color: black;
+    height: 90px;
+    width: 100%;
+    border-radius: 10px;
+
+    margin: 5px
+    
+}
+.card-2 {
+    background-color: rgb(255, 238, 0);
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    
+    margin: 5px}
+.card-3 {
+    background-color: rgb(17, 0, 255);
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+
+    margin: 10px}
+.card-4 {
+
+    background-color: rgb(30, 255, 0);
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    
+    margin: 5px
+}
+

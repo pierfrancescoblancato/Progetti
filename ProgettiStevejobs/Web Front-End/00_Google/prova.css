@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(66,66,66);
+    margin-top: 250px;
+
+}
+.container1{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+
+}
+.inp{
+    border-radius: 10px;
+    width: 600px;
+    height:30px;
+}
+.btn{
+    border-radius: 10px;
+    width: 150px;
+    height: 25px;
+    margin: 10px;
+}
+h1{
+    text-align: center;
+    color:rgb(255, 255, 255);
+}
