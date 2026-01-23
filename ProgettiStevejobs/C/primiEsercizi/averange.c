@@ -12,5 +12,4 @@ int main() {
         printf("the averange of %d and %d is %.2f \n", i, a, avg);
 
         return 0;
-
 }
