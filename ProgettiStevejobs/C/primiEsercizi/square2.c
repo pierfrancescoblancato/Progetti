@@ -11,7 +11,7 @@ int main() {
         while(row>0){
 
         square = i*i;
-        printf("the square of %d is %d\n", i, square);
+        printf("the square of %d is %d: \n", i, square);
          
         row--;
         i++;
