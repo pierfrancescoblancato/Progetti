@@ -1,0 +1,33 @@
+table {
+    border-collapse: collapse;
+    border-radius: 12px;
+}
+
+th, td {
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 16px;
+    text-align: left;
+}
+
+* {
+    background-color: rgb(255, 0, 0);
+}
+
+div  {
+    width: 64px;
+    height: 64px;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+div{   
+    background-color: yellow;
+}
+.box {
+    background-color: rgb(0, 255, 255);
+}
+
+#container {
+    background-color: blueviolet;
+}

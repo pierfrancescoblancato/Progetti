@@ -1,0 +1,38 @@
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 16px;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .container {
+        width: 64px;
+        height: 64px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 12px;
+    }
+    .color1 {
+        background-color: red;
+    }
+    .color2 {
+        background-color: green;
+    }
+
+@media (min-width: 768px) {
+    .color1{
+        background-color: rgb(0, 42, 255);
+    }
+    .color2 {
+        background-color: rgb(0, 255, 0);
+    }
+    }
+@media (min-width: 1024px) {
+    .color1 {
+        background-color: rgb(242, 255, 0);
+    }
+    .color2 {
+        background-color: green;
+    }
+}
