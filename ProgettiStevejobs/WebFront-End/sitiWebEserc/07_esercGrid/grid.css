@@ -30,8 +30,7 @@
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr 1fr; 
 
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
+    gap: 16px;
 }
 
 /* grid-area: row-start / column-start / row-end / column-end; */
@@ -48,7 +47,7 @@
 }
 .div1 {
     background-color: red;
-    grid-row: span 3;
+    grid-row: span 2;
 }
 
 .div2 {

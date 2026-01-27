@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.env.linux": {
+    "PATH": "/usr/bin:/usr/local/bin:$PATH"
+    }
+}
