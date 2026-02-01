@@ -1,7 +1,12 @@
 {
     "code-runner.executorMap": {
+
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
+        
+        "_comment": "comando per js su windows",
+        "javascript": "node $fullFileName"
+
 
         "_comment":"comando per js su linux con nvm",
         "javascript": "/home/pierfrancescoblancato/.nvm/versions/node/v25.5.0/bin/node $fullFileName",
