@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int n, cont = 0;
+    
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+    
+    if (n < 0) {
+        printf("the number must be positive!\n");
+        return 1;
+    }
+    
+    if (n == 0) {
+        cont = 1;
+    } else {
+        while (n > 0) {
+            n = n / 10; 
+            n++;
+        }
+    }
+    
+    printf("Il numero ha %d cifra/e\n", cont);
+    
+    return 0;
+}

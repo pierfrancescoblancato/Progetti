@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    
+    printf("\n exercise n1 \n");
+
     int n;
     
-    printf("Enter a number: ");
+    printf("Enter a integer number: ");
     scanf("%d", &n);
 
     if(n > 0){
