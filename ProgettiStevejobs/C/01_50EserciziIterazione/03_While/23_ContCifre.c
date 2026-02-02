@@ -10,7 +10,6 @@ int main() {
         printf("the number must be positive!\n");
         return 1;
     }
-    
     if (n == 0) {
         cont = 1;
     } else {
@@ -20,7 +19,7 @@ int main() {
         }
     }
     
-    printf("Il numero ha %d cifra/e\n", cont);
+    printf("the number have %d number/e\n", cont);
     
     return 0;
 }
