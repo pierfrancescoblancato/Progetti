@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    printf("\n exercise n33 \n");
+    printf("\n exercise n34 \n");
 
     int n1, n2;
     printf("Enter 2 numbers: \n");

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    printf("\n exercise n33 \n");
+    printf("\n exercise n35 \n");
 
     int row = 0,currentRow = 0, i = 0;
     printf("Enter a integer numbers: \n");
