@@ -7,7 +7,6 @@ int main() {
     printf("\n Enter a number: \n");
     scanf("%d", &n);
 
-    
     do{
         printf("%d x %d = %d\n", n, i, n * i);
         i++;

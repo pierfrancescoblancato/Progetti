@@ -11,7 +11,7 @@ int main() {
 
     int a = n1, b = n2;
 
-    //if b is 0, the MCD is 'a', the division for 0 is not defined
+    // se b è zero, MCD è l'altro, percio a 
     if (b == 0) {
         printf("MCD(%d, %d) = %d\n", n1, n2, a);
         return 0;
