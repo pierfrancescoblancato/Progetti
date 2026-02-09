@@ -11,6 +11,8 @@ const backdrop = document.getElementById("backdrop");
 //    usa querySelector sul contenuto già selezionato di addModal
 const cancelBtn = addModal.querySelector(".btn--passive");
 
+bodyColor = document.querySelector('body')
+const successBtn = document.querySelector(".btn--success")
 // 5. Aggiunta degli event listener (ascoltatori di eventi)
 // Quando si clicca sul bottone "ADD MOVIE", esegui la funzione apriModale
 addMovieBtn.addEventListener("click", apriModale);
@@ -20,6 +22,8 @@ cancelBtn.addEventListener("click", chiudiModale);
 
 // Quando si clicca sul backdrop (sfondo oscurato), esegui la funzione chiudiModale
 backdrop.addEventListener("click", chiudiModale);
+
+successBtn.addEventListener("click", backgroundColor);
 
 // 6. Funzione per APRIRE la modale
 function apriModale() {
@@ -44,4 +48,8 @@ function closeModalByBackGround(){
     // Stessa logica della funzione chiudiModale()
     addModal.classList.remove("visible");
     backdrop.classList.remove("visible");
+}
+
+function backgroundColor(){
+    bodyColor.style.backgroundColor = 'red';
 }
