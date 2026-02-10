@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio DOM e JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Esercizio sul DOM e JavaScript</h1>
+        
+        <!-- Sezione JSON Persona -->
+        <div class="persona-info">
+            <h2>Oggetto JSON Persona</h2>
+            <p>Visualizzato dalla console</p>
+        </div>
+        
+        <!-- Sezione Window dimensions -->
+        <div class="stats">
+            <p id="window-dimensions">Dimensioni finestra: caricamento...</p>
+            <p id="node-list-status">NodeList statica: 3 elementi</p>
+            <p id="html-collection-status">HTMLCollection live: 3 elementi</p>
+        </div>
+        
+        <!-- Lista di elementi -->
+        <div id="lista-container">
+            <h2>Lista Items <span id="contatore">(3 elementi)</span></h2>
+            <div class="item">Item 1 (esistente)</div>
+            <div class="item">Item 2 (esistente)</div>
+            <div class="item">Item 3 (esistente)</div>
+        </div>
+        
+        <!-- Bottoni per manipolare il DOM -->
+        <div class="button-container">
+            <button id="btn-add">Aggiungi nuovo item</button>
+            <button id="btn-highlight">Evidenzia primo item</button>
+            <button id="btn-remove" class="warning">Rimuovi ultimo item</button>
+            <button id="btn-toggle">Toggle classe highlight su secondo item</button>
+            <button id="btn-compare">Confronta NodeList vs HTMLCollection</button>
+        </div>
+        
+        <!-- Esempio combinatori CSS -->
+        <div class="child-example">
+            <p>Questo è un figlio diretto (selezionato con child combinator)</p>
+            <div>
+                <p>Questo è un discendente ma non figlio diretto</p>
+            </div>
+        </div>
+        
+        <div class="descendant-example">
+            <p>Questo è un discendente (selezionato con descendant combinator)</p>
+        </div>
+        
+        <!-- Navigazione DOM -->
+        <div class="navigation-container">
+            <button id="btn-navigate">Naviga nel DOM</button>
+            <button id="btn-closest">Trova parent più vicino con classe</button>
+            <button id="btn-family">Mostra relazioni familiari</button>
+        </div>
+        
+        <!-- Output navigazione -->
+        <div id="navigation-output" class="output"></div>
+        
+        <!-- Elemento per creazione dinamica -->
+        <div id="dynamic-area"></div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
