@@ -9,8 +9,6 @@ int main() {
 
     int n, sum = 0 ,count=0;  
     
-    
-
     do
     {
         printf("Enter number: ");
