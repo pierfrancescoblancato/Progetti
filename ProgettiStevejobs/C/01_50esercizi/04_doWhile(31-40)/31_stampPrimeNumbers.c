@@ -18,9 +18,7 @@ int main() {
         }
 
         if (isPrime) {
-
             printf("%d\n", n);
-
         }
 
         n++;
