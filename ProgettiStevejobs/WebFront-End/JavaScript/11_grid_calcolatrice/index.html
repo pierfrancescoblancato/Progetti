@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calcolatrice JS con Funzioni</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" disabled />
+
+    <div class="grid">
+      <!-- Prima riga -->
+      <button class="operator" data-action="clear">C</button>
+      <button class="operator" data-action="delete">DEL</button>
+      <button class="operator" data-action="divide">/</button>
+      <button class="operator" data-action="multiply">*</button>
+
+      <!-- Seconda riga -->
+      <button data-value="7">7</button>
+      <button data-value="8">8</button>
+      <button data-value="9">9</button>
+      <button class="operator" data-action="subtract">-</button>
+
+      <!-- Terza riga -->
+      <button data-value="4">4</button>
+      <button data-value="5">5</button>
+      <button data-value="6">6</button>
+      <button class="operator" data-action="add">+</button>
+
+      <!-- Quarta riga -->
+      <button data-value="1">1</button>
+      <button data-value="2">2</button>
+      <button data-value="3">3</button>
+      <button class="equal" data-action="equals">=</button>
+
+      <!-- Quinta riga -->
+      <button class="zero" data-value="0">0</button>
+      <button data-value=".">.</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
