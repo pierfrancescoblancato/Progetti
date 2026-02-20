@@ -1,0 +1,198 @@
+/* STILI BASE */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #f0f2f5;
+}
+
+h1 {
+    color: #1a73e8;
+    text-align: center;
+}
+
+/* LEGENDA */
+.legenda {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-around;
+}
+
+.legenda-item {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.freccia {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* SEZIONI */
+.sezione {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1a73e8;
+    margin-top: 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.sotto-sezione {
+    margin: 25px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* CONTENITORI FLEX */
+.contenitore {
+    display: flex;
+    background-color: #e3f2fd;
+    border: 2px dashed #1a73e8;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* BOX BASE */
+.box {
+    background-color: #1a73e8;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* BOX DI DIVERSE ALTEZZE */
+.piccolo {
+    height: 40px;
+    background-color: #34a853;
+}
+
+.medio {
+    height: 60px;
+    background-color: #fbbc04;
+    color: #333;
+}
+
+.grande {
+    height: 80px;
+    background-color: #ea4335;
+}
+
+/* JUSTIFY-CONTENT - ROW */
+.row.start {
+    justify-content: flex-start;
+}
+
+.row.center {
+    justify-content: center;
+}
+
+.row.between {
+    justify-content: space-between;
+}
+
+/* ALIGN-ITEMS - ROW */
+.row.items-center {
+    align-items: center;
+}
+
+/* COLUMN */
+.column.center-verticale {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.column.items-center-verticale {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* WRAP */
+.wrap {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.wrap .box {
+    width: 100px; /* Più larghi per vedere l'effetto wrap */
+}
+
+/* CENTRO PERFETTO */
+.centro-perfetto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #e8f0fe;
+}
+
+.box-centrato {
+    background-color: #34a853;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* FORMULA MAGICA */
+.formula {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.formula h3 {
+    margin-top: 0;
+    color: white;
+    font-size: 24px;
+}
+
+.formula p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .box {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    .wrap .box {
+        width: 70px;
+    }
+}

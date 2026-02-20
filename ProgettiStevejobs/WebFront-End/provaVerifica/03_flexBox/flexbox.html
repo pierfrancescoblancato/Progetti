@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Semplice</title>
+    <link rel="stylesheet" href="flexbox-semplice.css">
+</head>
+<body>
+    <h1>📦 Flexbox in Pratica</h1>
+    
+    <!-- LEGENDA -->
+    <div class="legenda">
+        <div class="legenda-item">
+            <span class="freccia">➡️</span> Asse Principale (justify-content)
+        </div>
+        <div class="legenda-item">
+            <span class="freccia">⬇️</span> Asse Incrociato (align-items)
+        </div>
+    </div>
+
+    <!-- ESEMPIO 1: ROW (RIGA) -->
+    <div class="sezione">
+        <h2>1. flex-direction: row (in riga)</h2>
+        <p>justify-content = orizzontale | align-items = verticale</p>
+        
+        <div class="sotto-sezione">
+            <h3>justify-content: flex-start (sinistra)</h3>
+            <div class="contenitore row start">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+        </div>
+
+        <div class="sotto-sezione">
+            <h3>justify-content: center (centro)</h3>
+            <div class="contenitore row center">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+        </div>
+
+        <div class="sotto-sezione">
+            <h3>justify-content: space-between (spazio tra)</h3>
+            <div class="contenitore row between">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+        </div>
+
+        <div class="sotto-sezione">
+            <h3>align-items: center (centro verticale)</h3>
+            <div class="contenitore row items-center" style="height: 120px;">
+                <div class="box piccolo">1</div>
+                <div class="box medio">2</div>
+                <div class="box grande">3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESEMPIO 2: COLUMN (COLONNA) -->
+    <div class="sezione">
+        <h2>2. flex-direction: column (in colonna)</h2>
+        <p>justify-content = verticale | align-items = orizzontale</p>
+        
+        <div class="sotto-sezione">
+            <h3>justify-content: center (centro verticale)</h3>
+            <div class="contenitore column center-verticale" style="height: 250px;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+        </div>
+
+        <div class="sotto-sezione">
+            <h3>align-items: center (centro orizzontale)</h3>
+            <div class="contenitore column items-center-verticale" style="height: 200px;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESEMPIO 3: WRAP (ANDARE A CAPO) -->
+    <div class="sezione">
+        <h2>3. flex-wrap: wrap (andare a capo)</h2>
+        <p>Quando gli elementi non ci stanno, vanno a capo</p>
+        
+        <div class="contenitore wrap">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </div>
+
+    <!-- ESEMPIO 4: CENTRATURA PERFETTA -->
+    <div class="sezione">
+        <h2>4. Centratura perfetta!</h2>
+        <p>justify-content: center + align-items: center</p>
+        
+        <div class="contenitore centro-perfetto">
+            <div class="box-centrato">
+                🎯 Centrato!
+            </div>
+        </div>
+    </div>
+
+    <!-- FORMULA MAGICA -->
+    <div class="formula">
+        <h3>📝 Regola semplice:</h3>
+        <p><strong>justify-content</strong> = allinea nella direzione della freccia (principale)</p>
+        <p><strong>align-items</strong> = allinea nell'altra direzione (incrociato)</p>
+        <p>⬅️ row → justify-content: orizzontale | align-items: verticale</p>
+        <p>⬇️ column → justify-content: verticale | align-items: orizzontale</p>
+    </div>
+
+</body>
+</html>
