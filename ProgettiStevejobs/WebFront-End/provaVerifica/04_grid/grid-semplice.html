@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Semplice</title>
+    <link rel="stylesheet" href="grid-semplice.css">
+</head>
+<body>
+    <h1>📐 CSS Grid - La Base</h1>
+    
+    <!-- 1. CREARE UNA GRIGLIA SEMPLICE -->
+    <div class="sezione">
+        <h2>1. Creare una griglia</h2>
+        <p>display: grid + grid-template-columns</p>
+        
+        <div class="griglia base">
+            <div class="cella">1</div>
+            <div class="cella">2</div>
+            <div class="cella">3</div>
+            <div class="cella">4</div>
+            <div class="cella">5</div>
+            <div class="cella">6</div>
+        </div>
+        <p class="didascalia">grid-template-columns: 1fr 1fr 1fr (3 colonne uguali)</p>
+    </div>
+
+    <!-- 2. COLONNE DIVERSE -->
+    <div class="sezione">
+        <h2>2. Colonne di dimensioni diverse</h2>
+        
+        <div class="griglia diverse">
+            <div class="cella">1</div>
+            <div class="cella">2</div>
+            <div class="cella">3</div>
+        </div>
+        <p class="didascalia">1fr 2fr 1fr (quella in mezzo è più grande)</p>
+    </div>
+
+    <!-- 3. GAP (SPAZI) -->
+    <div class="sezione">
+        <h2>3. gap - spazio tra le celle</h2>
+        
+        <div class="griglia con-gap">
+            <div class="cella">1</div>
+            <div class="cella">2</div>
+            <div class="cella">3</div>
+            <div class="cella">4</div>
+            <div class="cella">5</div>
+            <div class="cella">6</div>
+        </div>
+        <p class="didascalia">gap: 10px (spazio tra le celle)</p>
+    </div>
+
+    <!-- 4. ALLINEAMENTO ORIZZONTALE (justify-items) -->
+    <div class="sezione">
+        <h2>4. Allineamento orizzontale (justify-items)</h2>
+        
+        <div class="griglia allineamento">
+            <div class="cella start">start</div>
+            <div class="cella center">center</div>
+            <div class="cella end">end</div>
+            <div class="cella stretch">stretch</div>
+        </div>
+        <p class="didascalia">Ogni cella ha il suo allineamento orizzontale</p>
+    </div>
+
+    <!-- 5. ALLINEAMENTO VERTICALE (align-items) -->
+    <div class="sezione">
+        <h2>5. Allineamento verticale (align-items)</h2>
+        
+        <div class="griglia allineamento-verticale">
+            <div class="cella v-start">start</div>
+            <div class="cella v-center">center</div>
+            <div class="cella v-end">end</div>
+            <div class="cella v-stretch">stretch</div>
+        </div>
+        <p class="didascalia">Allineamento verticale dentro le celle</p>
+    </div>
+
+    <!-- 6. CENTRATURA PERFETTA CON GRID -->
+    <div class="sezione">
+        <h2>6. Centratura perfetta!</h2>
+        <p>place-items: center (allinea sia orizzontale che verticale)</p>
+        
+        <div class="griglia centratura">
+            <div class="cella-centrata">
+                🎯 CENTRATO!
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. POSIZIONARE UN ELEMENTO (grid-column) -->
+    <div class="sezione">
+        <h2>7. Posizionare un elemento (grid-column)</h2>
+        
+        <div class="griglia posizionamento">
+            <div class="cella">1</div>
+            <div class="cella grande">occupa 2 colonne</div>
+            <div class="cella">3</div>
+            <div class="cella">4</div>
+        </div>
+        <p class="didascalia">La cella 2 ha grid-column: span 2</p>
+    </div>
+
+    <!-- 8. LAYOUT SEMPLICE (header, main, sidebar, footer) -->
+    <div class="sezione">
+        <h2>8. Layout semplice con grid-template-areas</h2>
+        
+        <div class="layout">
+            <div class="header">HEADER</div>
+            <div class="sidebar">SIDEBAR</div>
+            <div class="main">MAIN</div>
+            <div class="footer">FOOTER</div>
+        </div>
+    </div>
+
+    <!-- RIASSUNTO VELOCE -->
+    <div class="riassunto">
+        <h3>📝 Regole semplici:</h3>
+        <p>🔹 display: grid → attiva la griglia</p>
+        <p>🔹 grid-template-columns → quante colonne</p>
+        <p>🔹 grid-template-rows → quante righe</p>
+        <p>🔹 gap → spazio tra celle</p>
+        <p>🔹 justify-items → allinea orizzontale</p>
+        <p>🔹 align-items → allinea verticale</p>
+        <p>🔹 place-items: center → centratura perfetta!</p>
+    </div>
+
+</body>
+</html>
