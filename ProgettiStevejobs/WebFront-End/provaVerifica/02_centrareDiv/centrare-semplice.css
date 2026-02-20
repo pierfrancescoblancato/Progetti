@@ -1,0 +1,272 @@
+/* STILI BASE */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #e91e63;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.sottotitolo {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* SEZIONI */
+.sezione {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #e91e63;
+    margin-top: 0;
+    border-bottom: 2px solid #f8bbd0;
+    padding-bottom: 10px;
+}
+
+.descrizione {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* CONTENITORI */
+.contenitore {
+    background-color: #f8bbd0;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    min-height: 150px;
+}
+
+.position-container {
+    position: relative;  /* Necessario per absolute inside */
+    height: 200px;
+}
+
+/* BOX BASE */
+.box {
+    background-color: #e91e63;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 200px;
+}
+
+/* METODO 1: MARGIN AUTO */
+.margin-auto {
+    margin: 0 auto;  /* Centra orizzontalmente */
+    width: 200px;
+}
+
+/* METODO 2: ABSOLUTE + TRANSFORM (IL MIGLIORE) */
+.absolute-transform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;  /* Toglie margini eventuali */
+}
+
+/* METODO 3: ABSOLUTE + MARGIN NEGATIVO */
+.absolute-margin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 100px;
+    margin-top: -50px;    /* metà dell'altezza */
+    margin-left: -100px;  /* metà della larghezza */
+}
+
+/* METODO 4: ABSOLUTE CON TUTTI I LATI A 0 */
+.absolute-all {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    margin: auto;  /* Funziona con tutti i lati a 0 */
+}
+
+/* CODICE ESEMPIO */
+.codice {
+    background-color: #263238;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* CONFRONTO */
+.confronto {
+    background-color: #e8f5e8;
+}
+
+.grid-confronto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.metodo {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.metodo h3 {
+    color: #e91e63;
+    margin-top: 0;
+    text-align: center;
+}
+
+.demo-container {
+    background-color: #f0f0f0;
+    height: 150px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.demo-box {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.metodo1 {
+    margin: 0 auto;  /* Solo orizzontale */
+}
+
+.metodo2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.metodo3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -60px;
+}
+
+.metodo4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 50px;
+    margin: auto;
+}
+
+.metodo p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0 0;
+}
+
+/* FORMULA MAGICA */
+.formula {
+    background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.formula h3 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.formula-box {
+    background-color: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.formula pre {
+    margin: 0;
+    font-size: 20px;
+    color: #ffeb3b;
+}
+
+/* CONSIGLI */
+.consigli {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.consigli h3 {
+    color: #e91e63;
+    margin-top: 0;
+}
+
+.consigli ul {
+    list-style: none;
+    padding: 0;
+}
+
+.consigli li {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    border-left: 4px solid #e91e63;
+}
+
+.consigli strong {
+    color: #e91e63;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .grid-confronto {
+        grid-template-columns: 1fr;
+    }
+    
+    .formula pre {
+        font-size: 14px;
+    }
+}

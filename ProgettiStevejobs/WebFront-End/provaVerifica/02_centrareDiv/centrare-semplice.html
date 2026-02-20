@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrare in CSS - Tutti i metodi</title>
+    <link rel="stylesheet" href="centrare-semplice.css">
+</head>
+<body>
+    <h1>🎯 CENTRARE IN CSS</h1>
+    <p class="sottotitolo">Tutti i modi per centrare un elemento</p>
+
+    <!-- METODO 1: MARGIN: 0 AUTO -->
+    <div class="sezione">
+        <h2>1. margin: 0 auto</h2>
+        <p class="descrizione">Per elementi block con larghezza definita</p>
+        
+        <div class="contenitore">
+            <div class="box margin-auto">
+                margin: 0 auto
+            </div>
+        </div>
+        <div class="codice">.box { width: 200px; margin: 0 auto; }</div>
+    </div>
+
+    <!-- METODO 2: POSITION ABSOLUTE + TRANSFORM -->
+    <div class="sezione">
+        <h2>2. position: absolute + transform</h2>
+        <p class="descrizione">Centra perfettamente indipendentemente dalla dimensione</p>
+        
+        <div class="contenitore position-container">
+            <div class="box absolute-transform">
+                absolute + transform
+            </div>
+        </div>
+        <div class="codice">
+            .box { <br>
+            &nbsp;&nbsp;position: absolute;<br>
+            &nbsp;&nbsp;top: 50%;<br>
+            &nbsp;&nbsp;left: 50%;<br>
+            &nbsp;&nbsp;transform: translate(-50%, -50%);<br>
+            }
+        </div>
+    </div>
+
+    <!-- METODO 3: POSITION ABSOLUTE + MARGIN (con dimensione fissa) -->
+    <div class="sezione">
+        <h2>3. position: absolute + margin (dimensione fissa)</h2>
+        <p class="descrizione">Funziona solo se conosci larghezza e altezza</p>
+        
+        <div class="contenitore position-container">
+            <div class="box absolute-margin">
+                absolute + margin
+            </div>
+        </div>
+        <div class="codice">
+            .box { <br>
+            &nbsp;&nbsp;width: 200px;<br>
+            &nbsp;&nbsp;height: 100px;<br>
+            &nbsp;&nbsp;position: absolute;<br>
+            &nbsp;&nbsp;top: 50%;<br>
+            &nbsp;&nbsp;left: 50%;<br>
+            &nbsp;&nbsp;margin-top: -50px;  /* metà altezza */<br>
+            &nbsp;&nbsp;margin-left: -100px; /* metà larghezza */<br>
+            }
+        </div>
+    </div>
+
+    <!-- METODO 4: POSITION ABSOLUTE + TOP/LEFT/... 0 + MARGIN AUTO -->
+    <div class="sezione">
+        <h2>4. position: absolute con tutti i lati a 0</h2>
+        <p class="descrizione">Funziona con dimensione fissa</p>
+        
+        <div class="contenitore position-container">
+            <div class="box absolute-all">
+                absolute con tutti i lati a 0
+            </div>
+        </div>
+        <div class="codice">
+            .box { <br>
+            &nbsp;&nbsp;width: 200px;<br>
+            &nbsp;&nbsp;height: 100px;<br>
+            &nbsp;&nbsp;position: absolute;<br>
+            &nbsp;&nbsp;top: 0;<br>
+            &nbsp;&nbsp;right: 0;<br>
+            &nbsp;&nbsp;bottom: 0;<br>
+            &nbsp;&nbsp;left: 0;<br>
+            &nbsp;&nbsp;margin: auto;<br>
+            }
+        </div>
+    </div>
+
+    <!-- CONFRONTO VISIVO -->
+    <div class="sezione confronto">
+        <h2>📊 Confronto diretto</h2>
+        
+        <div class="grid-confronto">
+            <div class="metodo">
+                <h3>margin: 0 auto</h3>
+                <div class="demo-container">
+                    <div class="demo-box metodo1">orizzontale</div>
+                </div>
+                <p>✓ Centra solo orizzontalmente<br>✗ Non centra verticalmente</p>
+            </div>
+            
+            <div class="metodo">
+                <h3>transform 50%</h3>
+                <div class="demo-container pos-rel">
+                    <div class="demo-box metodo2">perfetto!</div>
+                </div>
+                <p>✓ Centra sempre<br>✓ Non serve conoscere dimensioni</p>
+            </div>
+            
+            <div class="metodo">
+                <h3>absolute + margin</h3>
+                <div class="demo-container pos-rel">
+                    <div class="demo-box metodo3">dimensioni fisse</div>
+                </div>
+                <p>✓ Centra perfettamente<br>✗ Devi conoscere dimensioni</p>
+            </div>
+            
+            <div class="metodo">
+                <h3>absolute + 0 + auto</h3>
+                <div class="demo-container pos-rel">
+                    <div class="demo-box metodo4">anche questo</div>
+                </div>
+                <p>✓ Centra perfettamente<br>✗ Devi conoscere dimensioni</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORMULA MAGICA (LA MIGLIORE) -->
+    <div class="formula">
+        <h3>✨ LA FORMULA MAGICA (la migliore in assoluto)</h3>
+        <div class="formula-box">
+            <pre>
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);</pre>
+        </div>
+        <p><strong>Vantaggi:</strong> Funziona sempre, non serve conoscere le dimensioni, centra perfettamente sia orizzontalmente che verticalmente!</p>
+    </div>
+
+    <!-- QUANDO USARE COSA -->
+    <div class="consigli">
+        <h3>📝 Quando usare cosa:</h3>
+        <ul>
+            <li><strong>margin: 0 auto</strong> → solo per centrare orizzontalmente elementi block</li>
+            <li><strong>transform: translate(-50%, -50%)</strong> → per centrare SEMPRE e OVUNQUE (il migliore!)</li>
+            <li><strong>absolute + margin negativo</strong> → se conosci già le dimensioni</li>
+            <li><strong>absolute + 0 + margin auto</strong> → alternativa se conosci le dimensioni</li>
+        </ul>
+    </div>
+
+</body>
+</html>
