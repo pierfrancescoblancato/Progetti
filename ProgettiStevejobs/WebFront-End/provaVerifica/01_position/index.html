@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio Position CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Esempi di Position in CSS</h1>
+    
+    <!-- FIXED - Pulsante sempre visibile -->
+    <div class="fixed-example">
+        <strong>POSITION FIXED</strong><br>
+        Rimango sempre qui!
+    </div>
+
+    <!-- STATIC -->
+    <section class="container">
+        <h2>1. Position Static (default)</h2>
+        <div class="box static">
+            <strong>STATIC</strong><br>
+            Segue il flusso normale
+        </div>
+        <p>Questo div è in posizione static. top, left, right, bottom non hanno effetto.</p>
+    </section>
+
+    <!-- RELATIVE -->
+    <section class="container">
+        <h2>2. Position Relative</h2>
+        <div class="relative-container">
+            <div class="box relative">
+                <strong>RELATIVE</strong><br>
+                Spostato di 20px a destra e 20px in basso
+            </div>
+            <p>Questo div è position relative. Nota che lo spazio originale rimane occupato.</p>
+        </div>
+    </section>
+
+    <!-- ABSOLUTE -->
+    <section class="container">
+        <h2>3. Position Absolute</h2>
+        <div class="absolute-container">
+            <div class="box absolute">
+                <strong>ABSOLUTE</strong><br>
+                Posizionato rispetto al container
+            </div>
+            <p>Questo div è position absolute. Esce dal flusso e si posiziona rispetto al contenitore (che ha position relative).</p>
+        </div>
+    </section>
+
+    <!-- STICKY -->
+    <section class="container">
+        <h2>4. Position Sticky</h2>
+        <div class="sticky-container">
+            <div class="box sticky">
+                <strong>STICKY</strong><br>
+                Divento fisso quando scrolli
+            </div>
+            <div class="scroll-content">
+                <p>Scorri verso il basso per vedere l'effetto sticky...</p>
+                <p>Il box sopra rimarrà attaccato quando raggiunge il top della viewport.</p>
+                <p>Contenuto aggiuntivo per mostrare lo scrolling:</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABSOLUTE rispetto al documento -->
+    <section class="container">
+        <h2>5. Position Absolute (senza antenato posizionato)</h2>
+        <div class="box absolute-no-reference">
+            <strong>ABSOLUTE (no ref)</strong><br>
+            Mi posiziono rispetto alla finestra
+        </div>
+        <p>Questo div è absolute ma senza antenato posizionato, quindi si posiziona rispetto al viewport.</p>
+    </section>
+
+    <!-- Esempio interattivo con overlay -->
+    <section class="container">
+        <h2>Esempio pratico: Overlay con Absolute</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="assets/images.jpg" alt="Placeholder">
+                <div class="card-overlay">
+                    <p>OVERLAY<br>(Position Absolute)</p>
+                </div>
+            </div>
+            <p>Un esempio comune: overlay posizionato in modo assoluto sopra un'immagine.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Scorri la pagina per vedere tutti gli effetti! <br> Nota come il box FIXED rimane sempre visibile in alto a destra.</p>
+    </footer>
+</body>
+</html>
