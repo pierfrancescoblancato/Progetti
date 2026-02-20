@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box; /* Include padding e border nella larghezza totale */
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+    padding: 20px;
+}
+
+/* FLEXBOX (parent)*/
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f4f4f4;
+    border: 2px solid #000000;
+    min-height: 300px;
+}
+
+/* BOX MODEL (child)  */
+.box {
+    width: 80%;
+    height: 150px;
+
+    background-color: #3498db;
+    color: white;
+    border: 5px solid #2980b9;
+    font-size: 24px;
+    padding: 20px;
+    margin: 15px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* APPROCCIO MOBILE-FIRST: 
+   I breakpoint si attivano quando la larghezza è > il valore minimo */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; 
+    }
+
+    .box {
+        width: 150px;
+        background-color: #e74c3c;
+        border-color: #c0392b;
+    }
+}

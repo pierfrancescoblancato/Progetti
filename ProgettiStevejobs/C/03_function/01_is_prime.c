@@ -13,12 +13,12 @@ bool is_prime(int n){
         if (n % divisor == 0){
             return false;
         }
-        // Il return true; //è dentro il ciclo for,  viene eseguito alla prima iterazione, senza controllare tutti i divisori.
-
+        // Il return true; è dentro il ciclo for,  viene eseguito alla prima iterazione, senza controllare tutti i divisori.
         //la funzione controllava solo se 2 divide n, e poi ritornava subito true, dichiarando primi anche numeri come 9, 15, 21, ecc.
         //return true; spostato fuori dal ciclo
     }
     return true;
+
 }
 
 int main(void){
