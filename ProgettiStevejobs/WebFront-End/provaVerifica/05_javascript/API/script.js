@@ -10,7 +10,9 @@ const loadData = () => {
 			users.forEach(user => {
 				const card = document.createElement('div');
 				card.className = 'user';
-				card.innerHTML = `<strong>${user.name}</strong><br>${user.email}`;
+				card.innerHTML = `<strong>${user.name}</strong>
+				<br>
+				${user.email}`;
 				usersContainer.appendChild(card);
 			});
 		})

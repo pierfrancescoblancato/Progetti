@@ -259,14 +259,3 @@ h2 {
 .consigli strong {
     color: #e91e63;
 }
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .grid-confronto {
-        grid-template-columns: 1fr;
-    }
-    
-    .formula pre {
-        font-size: 14px;
-    }
-}
