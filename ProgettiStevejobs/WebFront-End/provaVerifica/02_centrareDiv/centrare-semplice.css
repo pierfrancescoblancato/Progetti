@@ -72,28 +72,35 @@ h2 {
 
 /* METODO 1: MARGIN AUTO */
 .margin-auto {
+
     margin: 0 auto;  /* Centra orizzontalmente */
     width: 200px;
+
 }
 
 /* METODO 2: ABSOLUTE + TRANSFORM (IL MIGLIORE) */
 .absolute-transform {
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;  /* Toglie margini eventuali */
+
 }
 
 /* METODO 3: ABSOLUTE + MARGIN NEGATIVO */
 .absolute-margin {
+    
     position: absolute;
     top: 50%;
     left: 50%;
+
     width: 200px;
     height: 100px;
-    margin-top: -50px;    /* metà dell'altezza */
-    margin-left: -100px;  /* metà della larghezza */
+    
+    margin-top: -75px;    /* metà dell'altezza */
+    margin-left: -120px;  /* metà della larghezza */
 }
 
 /* METODO 4: ABSOLUTE CON TUTTI I LATI A 0 */

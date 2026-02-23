@@ -1,3 +1,4 @@
+/* APPROCCIO MOBILE-FIRST: */
 * {
     box-sizing: border-box; /* Include padding e border nella larghezza totale */
 }
@@ -38,8 +39,8 @@ body {
     align-items: center;
 }
 
-/* APPROCCIO MOBILE-FIRST: 
-   I breakpoint si attivano quando la larghezza è > il valore minimo */
+
+   /*I breakpoint si attivano quando la larghezza è > il valore minimo */
 @media (min-width: 768px) {
     .container {
         flex-direction: row; 

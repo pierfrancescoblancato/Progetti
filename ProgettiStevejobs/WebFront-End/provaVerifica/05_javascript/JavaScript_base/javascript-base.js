@@ -3,6 +3,7 @@ const bottone = document.getElementById('mioBottone');
 const risultato1 = document.getElementById('risultato1');
 const box = document.getElementById('mioBox');
 const risultato2 = document.getElementById('risultato2');
+
 const campo = document.getElementById('campoTesto');
 const risultato3 = document.getElementById('risultato3');
 
