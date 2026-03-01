@@ -1,10 +1,9 @@
-/* STILI GENERALI */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f5f5f5;
-    min-height: 150vh; /* Per permettere lo scrolling */
+    min-height: 150vh;
 }
 
 h1 {
@@ -28,7 +27,6 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* STILE BASE PER I BOX */
 .box {
     width: 200px;
     height: 150px;
@@ -100,7 +98,7 @@ h2 {
 .sticky {
     position: sticky;
     background-color: #9C27B0;
-    top: 20px; /* Si attacca a 20px dal top */
+    top: 20px; /* si attacca a 20px dal top */
     z-index: 10;
 }
 
@@ -144,7 +142,6 @@ h2 {
     z-index: 5;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;

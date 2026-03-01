@@ -1,4 +1,3 @@
-/* STILI BASE */
 body {
     font-family: Arial, sans-serif;
     max-width: 1000px;
@@ -22,7 +21,6 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* SEZIONI */
 .sezione {
     background-color: white;
     border-radius: 10px;
@@ -44,7 +42,6 @@ h2 {
     margin-top: 5px;
 }
 
-/* CONTENITORI */
 .contenitore {
     background-color: #f8bbd0;
     padding: 40px 20px;
@@ -54,11 +51,10 @@ h2 {
 }
 
 .position-container {
-    position: relative;  /* Necessario per absolute inside */
+    position: relative;  
     height: 200px;
 }
 
-/* BOX BASE */
 .box {
     background-color: #e91e63;
     color: white;
@@ -87,32 +83,6 @@ h2 {
     transform: translate(-50%, -50%);
     margin: 0;  /* Toglie margini eventuali */
 
-}
-
-/* METODO 3: ABSOLUTE + MARGIN NEGATIVO */
-.absolute-margin {
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 200px;
-    height: 100px;
-    
-    margin-top: -75px;    /* metà dell'altezza */
-    margin-left: -120px;  /* metà della larghezza */
-}
-
-/* METODO 4: ABSOLUTE CON TUTTI I LATI A 0 */
-.absolute-all {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    height: 100px;
-    margin: auto;  /* Funziona con tutti i lati a 0 */
 }
 
 /* CODICE ESEMPIO */
@@ -180,27 +150,6 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.metodo3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120px;
-    height: 50px;
-    margin-top: -25px;
-    margin-left: -60px;
-}
-
-.metodo4 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 120px;
-    height: 50px;
-    margin: auto;
 }
 
 .metodo p {

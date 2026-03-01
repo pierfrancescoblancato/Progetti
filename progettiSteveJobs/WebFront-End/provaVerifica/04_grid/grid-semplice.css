@@ -255,21 +255,3 @@ h2 {
     margin-top: 10px;
     text-align: center;
 }
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .griglia.base,
-    .griglia.diverse,
-    .griglia.con-gap {
-        grid-template-columns: 1fr;  /* Una colonna su mobile */
-    }
-    
-    .layout {
-        grid-template-areas: 
-            "header"
-            "sidebar"
-            "main"
-            "footer";
-        grid-template-columns: 1fr;
-    }
-}
