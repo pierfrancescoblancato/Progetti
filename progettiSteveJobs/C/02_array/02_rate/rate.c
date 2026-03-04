@@ -1,22 +1,21 @@
-#include <stdio.h>ù
+#include <stdio.h>
 
 int main() {
     int i, j;
-    double capital = 100,rate;
+    double capital = 100, rate;
     int years;
 
     printf("Enter interest rate and number of years: ");
-    scanf("%d %d", &rate, &years);
+    scanf("%lf %d", &rate, &years);
 
-    printf("Rate: %d%% Years: %d\n", rate, years);
+    printf("Rate: %.2f%% Years: %d\n", rate, years);
     printf("Year 0: %.2f\n", capital);
 
     double balance[years];
 
     for (i = 1; i <= years; i++) {
-        capital = capital + (capital * rate / 100);
+        capital = capital + (capital * rate / 100.0);
         balance[i - 1] = capital;
-        //printf("Year %d: %d\n", i, balance[i - 1]);
     }
 
     printf("| Anno  |  Bilancio    |\n");
