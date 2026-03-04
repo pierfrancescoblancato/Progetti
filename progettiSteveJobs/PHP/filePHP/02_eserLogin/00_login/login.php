@@ -26,8 +26,12 @@
 
         <div class="passwordDiv">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Inserisci la password">
+            <input type="password" class="password-input" id="password" name="password" placeholder="Inserisci la password">
             <button type="button" class="toggle-password" id="toggle-password"></button>
+        </div>
+        <div class="other">
+            <a class="sign-in" href="signIn.php" style="">Registrati ora!</a><br>
+            <a class="password-forget" href="passwordForget.php">Password Dimenticata? clicca qui!</a>
         </div>
 
         <div class="submitDiv">

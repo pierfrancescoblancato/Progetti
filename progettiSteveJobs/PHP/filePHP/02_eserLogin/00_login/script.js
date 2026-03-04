@@ -1,10 +1,8 @@
-const password = document.getElementById("password");
-const buttonPassword = document.getElementById("toggle-password");
+const toggleBtn = document.querySelector(".toggle-password");
+const passwordInput = document.querySelector("#password"); 
 
-buttonPassword.onclick = () => {
-  const show = password.type === "password";
-  password.type = show ? "text" : "password";
-  buttonPassword.style.backgroundImage = show
-    ? 'url("assets/show.svg")'
-    : 'url("assets/hidden.svg")';
-};
+toggleBtn.addEventListener("click", () => {
+  const isHidden = passwordInput.type === "password";
+  passwordInput.type = isHidden ? "text" : "password";
+  toggleBtn.classList.toggle("hidden", isHidden);
+});
