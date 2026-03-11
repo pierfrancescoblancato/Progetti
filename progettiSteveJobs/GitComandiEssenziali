@@ -8,8 +8,20 @@ Aggiunge tutti i file modificati al prossimo commit.
 
 Aggiunge uno specifico file al prossimo commit.
     3. git commit -m "messaggio"
-
-Salva le modifiche localmente con un messaggio descrittivo.
+    Messaggi di commit
+        Tipo             Quando si usa
+        feat →     Si aggiunge una nuova funzionalità
+        fix →      Si corregge un bug
+        docs →     Si modifica solo documentazione ( per es: README o CHANGELOG)
+        style →    Modifiche estetiche al codice (spazi, virgole, formattazione) — nessun cambiamento logico
+        refactor → Si ristruttura codice esistente senza aggiungere feature né correggere bug
+        test →     Si aggiungono o modificano test
+        chore →    Attività di manutenzione (aggiornare dipendenze, configurare tool)
+        perf  →    Modifiche che migliorano le performance
+        ci  →      Modifiche alla configurazione del sistema di CI/CD
+        build  →   Modifiche al sistema di build o alle dipendenze esterne
+        revert  →  Si annulla un commit precedente
+        
     4. git push
 
 Invia i commit locali al repository remoto su GitHub.
