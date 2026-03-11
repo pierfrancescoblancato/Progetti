@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Se l'utente non è loggato, lo rimando al login
 if (!isset($_SESSION['email'])) {
     header("Location: login.php");
     exit();
