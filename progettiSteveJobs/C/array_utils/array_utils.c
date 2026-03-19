@@ -1,8 +1,5 @@
 #include <stdio.h>
-#include <string.h>
-
-#define ARRAY_SIZE 50
-#define FIXED_SIZE 10
+#include "array_utils.h"
 
 /* --- Input utilities --- */
 int readRange(const char prompt[], int min_value, int max_value) {
@@ -100,69 +97,4 @@ int findTargetIndex(const int array[], int length, int target) {
         if (array[i] == target) return i;
     }
     return -1;
-}
-
-/* --- Three demos (derivate dalle tre versioni originali) --- */
-
-/* Demo 1: gestione voti (versione con ARRAY_SIZE) */
-void demoVotes(void) {
-    int votes[ARRAY_SIZE];
-    int count = readRange("Quanti voti vuoi inserire? (1..50): ", 1, ARRAY_SIZE);
-    printf("Inserisci i voti (0..30):\n");
-    readArrayWithRange(votes, count, "Inserire voto", 0, 30);
-
-    printf("\nHai inserito questi voti:\n");
-    printArray(votes, count);
-
-    int minValue = arrayMin(votes, count);
-    int maxValue = arrayMax(votes, count);
-    int sum = arraySum(votes, count);
-    float average = arrayAvg(sum, count);
-
-    printf("Valore minimo: %d\n", minValue);
-    printf("Valore massimo: %d\n", maxValue);
-    printf("Media: %.2f\n", average);
-
-    int threshold = readRange("Inserisci la soglia per contare voti >= soglia (0..30): ", 0, 30);
-    int above = countAboveThreshold(votes, count, threshold);
-    printf("Numero di voti >= %d: %d\n", threshold, above);
-
-    int target = readRange("Inserisci il valore target da cercare (0..30): ", 0, 30);
-    int idx = findTargetIndex(votes, count, target);
-    if (idx != -1) {
-        printf("Valore %d trovato all'indice: %d\n", target, idx);
-    } else {
-        printf("Valore %d non trovato nell'array.\n", target);
-    }
-}
-
-/* Demo 2: lettura di SIZE elementi e stampa invertita (versione con SIZE=10) */
-void demoFixedReverse(void) {
-    int number[FIXED_SIZE];
-    printf("\n--- Demo array fisso (%d elementi) ---\n", FIXED_SIZE);
-    readFixedArray(number, FIXED_SIZE);
-
-    printf("Hai inserito: ");
-    printArrayInline(number, FIXED_SIZE);
-
-    printf("Array invertito: ");
-    printArrayReversed(number, FIXED_SIZE);
-}
-
-/* Demo 3: stampa array statico (versione con array inizializzato) */
-void demoStaticArray(void) {
-    int votes[] = {2, 3, 4, 5, 6, 7, 4, 3, 2, 8};
-    int length = sizeof(votes) / sizeof(votes[0]);
-
-    printf("\n--- Demo array statico ---\n");
-    printf("Array statico: ");
-    printArrayInline(votes, length);
-}
-
-/* --- Main pulito --- */
-int main(void) {
-    demoVotes();
-    demoFixedReverse();
-    demoStaticArray();
-    return 0;
 }
