@@ -4,14 +4,11 @@ url = "http://localhost:11434/api/generate"
 
 while True:
 
-    user = input("Tu:")
-
+    user = input("Tu: ")
     data = {
-        "model":"",
+        "model": "tinyllama",
         "prompt": user,
         "stream": False
     }
-
     response = requests.post(url, json=data)
-
-    print("AI: ",response.json()["response"])
+    print("AI:", response.json()["response"])
