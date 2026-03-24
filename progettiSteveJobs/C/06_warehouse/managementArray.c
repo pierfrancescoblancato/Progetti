@@ -41,13 +41,11 @@ int printMenu()
     printf("0. Exit\n");
     printf("=========================================\n");
 
-    int ch = readInt("Select an option: ");
-
-    return ch;
+    return readInt("Select an option: ");
 }
+
 void addProduct(int codes[], char names[][NAME_LENGTH], float prices[], int quantities[], int position)
 {
-
     printf("Code: ");
     scanf("%d", &codes[position]);
 
@@ -63,12 +61,10 @@ void addProduct(int codes[], char names[][NAME_LENGTH], float prices[], int quan
 
 int findProduct(int codes[], int count, int searchCode)
 {
-    int i;
     for (int i = 0; i < count; i++)
     {
         if (codes[i] == searchCode)
         {
-            printf("%d ", i);
             return i;
         }
     }
@@ -77,16 +73,14 @@ int findProduct(int codes[], int count, int searchCode)
 
 void printArchive(int codes[], char names[][NAME_LENGTH], float prices[], int quantities[], int count)
 {
-    int i;
-
     if (count == 0)
     {
-        printf("no product avaible");
+        printf("No products available.\n");
     }
     else
     {
         printf("\n%-10s %-20s %-10s %-10s\n", "CODE", "NAME", "PRICE", "QUANTITY");
-        for (i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             printf("%-10d %-20s %-10.2f %-10d\n",
                    codes[i], names[i], prices[i], quantities[i]);
@@ -94,19 +88,17 @@ void printArchive(int codes[], char names[][NAME_LENGTH], float prices[], int qu
     }
 }
 
-int searchProduct()
-{
-}
-
 int main()
 {
-
     int codes[MAX_PRODUCTS];
-    char nameProduct[MAX_PRODUCTS];
+    char nameProduct[MAX_PRODUCTS][NAME_LENGTH];
     float prices[MAX_PRODUCTS];
     int quantities[MAX_PRODUCTS];
     int count = 0;
     int choice;
+ 
+    int searchedCode, index, newQuantity, soldQuantity, addedQuantity;
+    float newPrice, totalValue;
 
     do
     {
@@ -116,7 +108,7 @@ int main()
         case 1:
             if (count < MAX_PRODUCTS)
             {
-                printf("you are selected n1: ");
+                printf("You selected (1):\n");
                 addProduct(codes, nameProduct, prices, quantities, count);
                 count++;
             }
@@ -125,16 +117,16 @@ int main()
                 printf("!!! ARCHIVE IS FULL !!!\n");
             }
             break;
+
         case 2:
-            printf("you are selected n2: ");
+            printf("You selected (2):\n");
             printArchive(codes, nameProduct, prices, quantities, count);
             break;
+
         case 3:
-            int searchedCode;
-            int index;
+            printf("You selected (3):\n");
             printf("Enter code: ");
             scanf("%d", &searchedCode);
-            printf("you are selected (3): ");
 
             index = findProduct(codes, count, searchedCode);
 
@@ -145,16 +137,18 @@ int main()
                 printf("Price: %.2f\n", prices[index]);
                 printf("Quantity: %d\n", quantities[index]);
             }
+            else
+            {
+                printf("Product not found.\n");
+            }
             break;
+
         case 4:
-            printf("you are selected (4): ");
-            int searchedCode;
-            int index;
-            float newPrice;
+            printf("You selected (4):\n");
             printf("Enter code: ");
             scanf("%d", &searchedCode);
 
-            index = findProductIndex(codes, count, searchedCode);
+            index = findProduct(codes, count, searchedCode);
 
             if (index != -1)
             {
@@ -168,20 +162,16 @@ int main()
                 printf("Product not found.\n");
             }
             break;
-        case 5:
-            printf("you are selected (5): ");
-            int searchedCode;
-            int index;
-            int newQuantity;
 
+        case 5:
+            printf("You selected (5):\n");
             printf("Enter code: ");
             scanf("%d", &searchedCode);
 
-            index = findProductIndex(codes, count, searchedCode);
+            index = findProduct(codes, count, searchedCode);
 
             if (index != -1)
             {
-
                 printf("New quantity: ");
                 scanf("%d", &newQuantity);
                 quantities[index] = newQuantity;
@@ -189,19 +179,17 @@ int main()
             }
             else
             {
-
                 printf("Product not found.\n");
             }
             break;
+
         case 6:
-            printf("you are selected (3): ");
-            int searchedCode;
-            int index;
-            int soldQuantity;
+            printf("You selected (6):\n");
             printf("Enter code: ");
             scanf("%d", &searchedCode);
 
-            index = findProductIndex(codes, count, searchedCode);
+            index = findProduct(codes, count, searchedCode);
+            
             if (index != -1)
             {
                 printf("Quantity to sell: ");
@@ -213,7 +201,7 @@ int main()
                 }
                 else
                 {
-                    printf("Insufficient quantity.\n");
+                    printf("Insufficient quantity or invalid input.\n");
                 }
             }
             else
@@ -221,14 +209,14 @@ int main()
                 printf("Product not found.\n");
             }
             break;
+
         case 7:
-            printf("you are selected (3): ");
-            int searchedCode;
-            int index;
-            int addedQuantity;
+            printf("You selected (7):\n");
             printf("Enter code: ");
             scanf("%d", &searchedCode);
-            index = findProductIndex(codes, count, searchedCode);
+            
+            index = findProduct(codes, count, searchedCode);
+            
             if (index != -1)
             {
                 printf("Quantity to add: ");
@@ -248,23 +236,27 @@ int main()
                 printf("Product not found.\n");
             }
             break;
-        case 8:
-            printf("you are selected (3): ");
-            int i;
-            float totalValue = 0;
-            for (i = 0; i < count; i++)
+
+        case 9:
+            printf("You selected (9):\n");
+            totalValue = 0;
+            for (int i = 0; i < count; i++)
             {
-                totalValue = totalValue + prices[i] * quantities[i];
+                totalValue = totalValue + (prices[i] * quantities[i]);
             }
             printf("Total warehouse value: %.2f\n", totalValue);
+            break;
 
-            break;
         case 0:
-            printf("you are selected (0): EXIT NOW!");
+            printf("You selected (0): EXIT NOW!\n");
             break;
+
         default:
+            printf("Invalid choice. Try again.\n");
             break;
         }
 
-    } while (choice = !0);
+    } while (choice != 0);
+
+    return 0;
 }
